@@ -1,0 +1,54 @@
+@value btn_size: min(10px + 2vw, 20px);
+
+.container {
+	position: fixed;
+	bottom: 10vh;
+	right: 5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.btn {
+	width: calc(btn_size * 0.7);
+	height: calc(btn_size * 0.7);
+	margin: calc(btn_size * 0.55);
+	transition: transform 150ms ease-in-out,
+		border 150ms ease-in-out,
+		width 150ms ease-in-out,
+		height 150ms ease-in-out,
+		margin 150ms ease-in-out;
+
+	cursor: pointer;
+	border: solid calc(3px) var(--color-orange);
+	transform: rotate(45deg);
+}
+
+.btn:hover {
+	transition: transform 150ms ease-in-out,
+		border 150ms ease-in-out,
+		width 150ms ease-in-out,
+		height 150ms ease-in-out,
+		margin 150ms ease-in-out,
+		background-color 150ms step-end;
+		
+	border: solid calc(btn_size * 0.7 / 2) var(--color-blue);
+	background-color: var(--color-blue);
+}
+
+.active {
+	width: btn_size;
+	height: btn_size;
+	margin: calc(btn_size * 0.4);
+	transition: transform 150ms ease-in-out,
+		border 150ms ease-in-out,
+		width 150ms ease-in-out,
+		height 150ms ease-in-out,
+		margin 150ms ease-in-out,
+		background-color 150ms step-end;
+
+	border: solid calc(btn_size / 2) var(--color-blue);
+	background-color: var(--color-blue);
+	transform: rotate(0deg);
+}

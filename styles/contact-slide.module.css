@@ -1,0 +1,68 @@
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding-top: 20vh;
+	gap: 50px;
+}
+
+.text_container {
+	width: 30vw;
+}
+.contact_body {
+	max-height: 51vh;
+	overflow-y: auto;
+}
+
+.form_container {
+	width: 40vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: flex-start;
+	gap: calc(1vw + 2px);
+}
+
+.small_input {
+	width: calc(50% - 0.5vw - 1px);
+}
+
+.large_input {
+	width: 100%;
+}
+
+.text_area {
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 30vh;
+	height: 35vh;
+	max-height: 50vh;
+	resize: vertical;
+}
+
+.btn_send {
+	background-color: var(--color-green);
+	transition: all 100ms ease-in-out;
+}
+
+
+@media only screen and (max-width: 750px) {
+	.container {
+		flex-direction: column;
+		align-items: center;
+		padding-top: 0;
+	}
+	.text_container {
+		width: calc(80vw - 50px);
+	}
+	.form_container {
+		width: calc(80vw - 50px);
+	}
+	.text_area {
+		min-height: 20vh;
+		height: 25vh;
+	}
+}
