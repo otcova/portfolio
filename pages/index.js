@@ -7,12 +7,13 @@ import { ContactSlide } from "../slides/contact"
 
 export default function MainPage() {
 	const [current_page, set_page] = useState(0)
+	
 	return <div>
 		<Nav current_page={current_page} set_page={set_page} />
 		<TitleSlide />
 		<AboutSlide />
 		<PortfolioSlide />
-		<ContactSlide />
+		<ContactSlide show={current_page == 3}/>
 	</div>
 }
 

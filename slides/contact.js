@@ -3,7 +3,7 @@ import { useLocal } from "../locale"
 import style from "../styles/contact-slide.module.css"
 import { user_info } from "../utils/user_info"
 
-export function ContactSlide() {
+export function ContactSlide({ show }) {
 	const locale = useLocal()
 
 	const name_input = useRef()
@@ -24,6 +24,14 @@ export function ContactSlide() {
 		}
 
 		send_email({ name, email, subject, message })
+	}
+
+	//block tab when not in this slide
+	if (typeof window != "undefined") {
+		onkeydown = e => {
+			if (!show && e.key == "Tab")
+				e.preventDefault()
+		}
 	}
 
 	return <div className={style.container}>
