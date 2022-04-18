@@ -12,8 +12,11 @@ for (const text_id in raw_lang_data)
 			.replace(/\n{2,}/gm, "|")
 			.replace(/\n/gm, "")
 			.replaceAll("|", "\n\n")
-			
+
+export let page_language = "en";
+
 export function useLocal() {
 	const router = useRouter()
-	return lang_data[router.locale]
+	page_language = router.locale
+	return lang_data[page_language]
 }

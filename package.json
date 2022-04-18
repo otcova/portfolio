@@ -6,8 +6,12 @@
     "start": "next start"
   },
   "dependencies": {
-    "csv-loader": "^3.0.3",
+    "@emailjs/browser": "^3.6.2",
+    "googleapis": "^100.0.0",
     "next": "latest",
+    "nodemailer": "^6.7.3",
+    "nodemailer-plugin-inline-base64": "^2.1.1",
+    "raw-loader": "^4.0.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   }

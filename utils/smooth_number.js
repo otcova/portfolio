@@ -38,7 +38,6 @@ export class SmoothNumber {
 			if (dt > t_to_stop) {
 				this.x = this.target
 				this.v = 0
-				console.log("stop")
 				return
 			}
 		}

@@ -5,12 +5,8 @@ module.exports = {
 	},
 	webpack: (config, options) => {
 		config.module.rules.push({
-			test: /\.csv/,
-			loader: "csv-loader",
-			options: {
-				header: true,
-				skipEmptyLines: true
-			}
+			test: /\.html/,
+			use: "raw-loader",
 		})
 
 		return config
