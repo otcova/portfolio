@@ -16,7 +16,7 @@
 	height: height;
 	background-color: #842e13;
 	border-radius: 20px;
-	border: solid 2px #000;
+	border: solid 1px #000;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -58,7 +58,7 @@
 	width: calc(10vw + 80px);
 	height: calc(2vh + 50px);
 	background-color: #aaa;
-	border: solid 2px #000;
+	border: solid 1px #000;
 	border-radius: 20px;
 }
 

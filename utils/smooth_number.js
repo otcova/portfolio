@@ -7,7 +7,7 @@ export class SmoothNumber {
 		this.a = a
 		this.v = 0
 		this.x = 0
-		this.target = 200
+		this.target = 0
 		this.past_t = performance.now()
 	}
 
@@ -20,7 +20,7 @@ export class SmoothNumber {
 
 	step() {
 		const dt = this.#step_time()
-		if (Math.abs(this.x - this.target) < 0.000001) return
+		if (Math.abs(this.x - this.target) < 0.000001) return false;
 
 		let dir = Math.sign(this.target - this.x);
 
@@ -38,17 +38,21 @@ export class SmoothNumber {
 			if (dt > t_to_stop) {
 				this.x = this.target
 				this.v = 0
-				return
+				return true;
 			}
 		}
 
 		this.x = mrua_x(this.x, this.v, a, dt)
 		this.v += a * dt
+		return true;
 	}
 	set_target(new_target) {
 		this.target = new_target
 	}
 	increment_target(dx) {
 		this.target += dx
+	}
+	set(new_value) {
+		this.x = this.target = new_value
 	}
 }

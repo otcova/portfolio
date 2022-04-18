@@ -20,3 +20,7 @@ export function useLocal() {
 	page_language = router.locale
 	return lang_data[page_language]
 }
+
+export function changeLanguage(router, locale) {
+	router.push(router.pathname, router.asPath, { locale, scroll: false });
+};

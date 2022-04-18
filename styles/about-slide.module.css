@@ -2,25 +2,33 @@
 
 .container {
 	height: 100vh;
-	padding-top: calc(50vh - height / 2);
-	gap: 60px;
+	gap: 70px;
 	display: flex;
 	flex-direction: row;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: center;
 }
 
 .text_container {
 	width: 30vw;
+	min-height: height;
 }
 
 .library_container {
 	width: 40vw;
 	height: height;
+	flex-shrink: 0;
 }
+
+.about_body {
+	overflow-y: auto;
+	max-height: calc(75vh - 3rem);
+}
+
 
 @media only screen and (max-width: 750px) {
 	.container {
+		gap: 0px;
 		padding-top: 7vh;
 		padding-bottom: 7vh;
 		flex-direction: column;
@@ -30,8 +38,15 @@
 	.library_container {
 		width: 70vw;
 		height: 50vh;
+		min-height: 50vh;
 	}
 	.text_container {
 		width: 70vw;
+		min-height: 0px;
+		margin-bottom: max(10px, 3vh);
+	}
+	.about_body {
+		min-height: 10vh;
+		max-height: 25vh;
 	}
 }

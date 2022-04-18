@@ -15,8 +15,6 @@ body,
 
 * {
 	box-sizing: border-box;
-	/* scrollbar-color: rebeccapurple green;
-	scrollbar-width: thin; */
 }
 
 input {
@@ -26,7 +24,7 @@ input {
 	padding-bottom: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	border: solid 2px #000;
+	border: solid 1px #000;
 	outline: none;
 }
 textarea {
@@ -36,7 +34,7 @@ textarea {
 	padding-bottom: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	border: solid 2px #000;
+	border: solid 1px #000;
 	outline: none;
 }
 
@@ -48,22 +46,42 @@ button {
 	padding-bottom: 10px;
 	padding-left: 40px;
 	padding-right: 40px;
-	border: solid 2px #000;
+	border: solid 1px #000;
 	outline: none;
 }
 button:hover {
 	background-color: var(--color-blue);
+	border-width: 2px;
+	padding-left: 39px;
+	padding-right: 39px;
+	padding-top: 9px;
+	padding-bottom: 9px;
 	color: #fff;
 }
 button:focus {
 	background-color: var(--color-blue);
+	border-width: 2px;
+	padding-left: 39px;
+	padding-right: 39px;
+	padding-top: 9px;
+	padding-bottom: 9px;
 	color: #fff;
 }
 
 input:focus {
+	border-width: 2px;
+	padding-left: 9px;
+	padding-right: 9px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 	border-color: #cc471f;
 }
 textarea:focus {
+	border-width: 2px;
+	padding-left: 9px;
+	padding-right: 9px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 	border-color: #cc471f;
 }
 
@@ -95,7 +113,7 @@ textarea:focus {
 }
 
 .header {
-	font-size: 3rem;
+	font-size: min(3rem, 2rem + 1vw);
 	font-weight: bold;
 	margin-bottom: min(2vh, 20px);
 	color: var(--color-orange);

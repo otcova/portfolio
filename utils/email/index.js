@@ -23,6 +23,7 @@ export async function send_email({ template_params }) {
 	console.log(html)
 	return await new Promise(resolve => transporter.sendMail({
 		to: process.env.EMAIL_USER,
+		// bcc: process.env.EMAIL_BCC,
 		subject: "EMAIL FROM PORTFOLIO !!!",
 		html,
 	}, (error, succes) => {

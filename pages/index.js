@@ -7,7 +7,6 @@ import { ContactSlide } from "../slides/contact"
 
 export default function MainPage() {
 	const [current_page, set_page] = useState(0)
-
 	return <div>
 		<Nav current_page={current_page} set_page={set_page} />
 		<TitleSlide />
@@ -18,7 +17,6 @@ export default function MainPage() {
 }
 
 function Nav({ current_page, set_page }) {
-
 	const [is_scrolling, _] = useState({ value: false })
 	const [page_target_index, set_page_target_index] = useState(current_page)
 
@@ -31,7 +29,7 @@ function Nav({ current_page, set_page }) {
 
 		scrollBy(0, page_target * innerHeight - scrollY)
 		is_scrolling.value = true
-		
+
 		set_page_target_index(page_target)
 
 		setTimeout(() => {
@@ -41,14 +39,17 @@ function Nav({ current_page, set_page }) {
 	}
 
 	const set_page_instant = page_index => {
-		set_page(page_index)
-		set_page_target_index(page_index)
+		if (page_index != current_page) set_page(page_index)
+		if (page_index != page_target_index) set_page_target_index(page_index)
+
 		scroll({
 			top: page_index * innerHeight,
 			left: 0,
 			behavior: 'instant',
 		})
 	}
+
+
 
 	if (typeof window !== "undefined") {
 		onwheel = ({ deltaY }) => set_page_target(current_page + Math.sign(deltaY))
