@@ -62,21 +62,19 @@ export default {
 		cat: "Sobre mi",
 	},
 	contact_body: {
-		en: `I'm seeking out opportunities to work with 
-		companies / agencies / individuals. 
-		I want to bring my programming experience to the table 
-		where we can work together to solve real business-problems 
-		in a way that optimizes all of our respective experience and knowledge. 
-		However, I also like to teach people the beauty of code, 
-		from absolute beginners to more advanced people.
-		`,
-		es: "...",
-		cat: "...",
+		en: `I'm seeking out opportunities to work with companies / agencies / individuals. I want to bring my programming experience to the table where we can work together to solve real business-problems in a way that optimizes all of our respective experience and knowledge. However, I also like to teach people the beauty of code, from absolute beginners to more advanced people.`,
+		es: "Estoy buscando oportunidades para trabajar con empresas/agencias/individuos. Quiero aportar mi experiencia en programación a la mesa donde podamos trabajar juntos para resolver problemas comerciales reales de una manera que optimice toda nuestra experiencia y conocimiento respectivos. Sin embargo, también me gusta enseñar a la gente la belleza del código, desde absolutos principiantes hasta personas más avanzadas.",
+		cat: "Estic buscant oportunitats per treballar amb empreses / agències / particulars. Vull aportar la meva experiència de programació a la taula on puguem treballar junts per resoldre problemes reals de negoci d'una manera que optimitzin tota la nostra experiència i coneixements respectius. Tanmateix, també m'agrada ensenyar a la gent la bellesa del codi, des d'absoluts principiants fins a persones més avançades.",
 	},
 	name: {
 		en: "Name",
 		es: "Nombre",
 		cat: "Nom",
+	},
+	email: {
+		en: "Email",
+		es: "Email",
+		cat: "Email",
 	},
 	subject: {
 		en: "Subject",

@@ -26,9 +26,9 @@ export async function send_email({ template_params }) {
 		// bcc: process.env.EMAIL_BCC,
 		subject: "EMAIL FROM PORTFOLIO !!!",
 		html,
-	}, (error, succes) => {
-		if (error) resolve({ success: false, res: error })
-		else resolve({ succes: true, res: succes })
+	}, (error, success) => {
+		if (error) resolve({ success: false, error })
+		else resolve({ success: true })
 	})
 	)
 }

@@ -24,8 +24,8 @@ input {
 	padding-bottom: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	border: solid 1px #000;
-	outline: none;
+	outline: solid 1px #000;;
+	border: none;
 }
 textarea {
 	font-family: inherit;
@@ -34,8 +34,8 @@ textarea {
 	padding-bottom: 8px;
 	padding-left: 10px;
 	padding-right: 10px;
-	border: solid 1px #000;
-	outline: none;
+	outline: solid 1px #000;
+	border: none;
 }
 
 button {
@@ -46,63 +46,31 @@ button {
 	padding-bottom: 10px;
 	padding-left: 40px;
 	padding-right: 40px;
-	border: solid 1px #000;
-	outline: none;
+	outline: solid 1px #000;
+	border: none;
 }
 button:hover {
 	background-color: var(--color-blue);
-	border-width: 2px;
-	padding-left: 39px;
-	padding-right: 39px;
-	padding-top: 9px;
-	padding-bottom: 9px;
+	outline-width: 2px;
 	color: #fff;
 }
 button:focus {
 	background-color: var(--color-blue);
-	border-width: 2px;
-	padding-left: 39px;
-	padding-right: 39px;
-	padding-top: 9px;
-	padding-bottom: 9px;
+	outline-width: 2px;
 	color: #fff;
 }
 
 input:focus {
-	border-width: 2px;
-	padding-left: 9px;
-	padding-right: 9px;
-	padding-top: 7px;
-	padding-bottom: 7px;
-	border-color: #cc471f;
+	outline: solid 2px #cc471f;
 }
 textarea:focus {
-	border-width: 2px;
-	padding-left: 9px;
-	padding-right: 9px;
-	padding-top: 7px;
-	padding-bottom: 7px;
-	border-color: #cc471f;
+	outline: solid 2px #cc471f;
 }
 
 .bottom-row {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-end;
-	justify-content: center;
-}
-
-.center-row {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-}
-
-.center-col {
-	display: flex;
-	flex-direction: col;
-	align-items: center;
 	justify-content: center;
 }
 

@@ -11,6 +11,7 @@
     "next": "latest",
     "nodemailer": "^6.7.3",
     "nodemailer-plugin-inline-base64": "^2.1.1",
+    "preact": "^10.7.1",
     "raw-loader": "^4.0.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
